@@ -1,3 +1,9 @@
+# revision 17261
+# category Package
+# catalog-ctan /macros/latex/contrib/euler
+# catalog-date 2010-02-28 19:16:53 +0100
+# catalog-license lppl
+# catalog-version 2.5
 Name:		texlive-euler
 Version:	2.5
 Release:	1
@@ -48,6 +54,7 @@ fonts for the Concrete book are supported by the beton package.
 #- source
 %doc %{_texmfdistdir}/source/latex/euler/euler.dtx
 %doc %{_texmfdistdir}/source/latex/euler/euler.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ fonts for the Concrete book are supported by the beton package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
