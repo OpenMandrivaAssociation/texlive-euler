@@ -54,3 +54,17 @@ fonts for the Concrete book are supported by the beton package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.5-2
++ Revision: 751661
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.5-1
++ Revision: 718384
+- texlive-euler
+- texlive-euler
+- texlive-euler
+- texlive-euler
+
