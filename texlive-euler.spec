@@ -6,7 +6,7 @@
 # catalog-version 2.5
 Name:		texlive-euler
 Version:	2.5
-Release:	10
+Release:	11
 Summary:	Use AMS Euler fonts for math
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/euler
