@@ -1,19 +1,13 @@
-# revision 17261
-# category Package
-# catalog-ctan /macros/latex/contrib/euler
-# catalog-date 2010-02-28 19:16:53 +0100
-# catalog-license lppl
-# catalog-version 2.5
 Name:		texlive-euler
-Version:	2.5
-Release:	11
+Version:	42428
+Release:	1
 Summary:	Use AMS Euler fonts for math
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/euler
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euler.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euler.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euler.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euler.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euler.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/euler.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ Knuth's macros for the book 'Concrete Mathematics'. The text
 fonts for the Concrete book are supported by the beton package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,24 +41,11 @@ fonts for the Concrete book are supported by the beton package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.5-2
-+ Revision: 751661
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.5-1
-+ Revision: 718384
-- texlive-euler
-- texlive-euler
-- texlive-euler
-- texlive-euler
-
