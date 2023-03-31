@@ -1,6 +1,6 @@
 Name:		texlive-euler
 Version:	42428
-Release:	1
+Release:	2
 Summary:	Use AMS Euler fonts for math
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/euler
